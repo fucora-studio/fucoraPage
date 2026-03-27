@@ -2,8 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
 	return (
-		<div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-			<div></div> 
+		<div className="flex flex-col items-center justify-center min-h-screen">
+			<h1 className="font-bold text-2xl">Fucora</h1>
+			<br/>
+			<h1 className="font-bold text-2xl">Unofficial UNSW Projects</h1>
+			<br/>
+			<p className="text-md">Made by UNSW's students to help others</p>
 		</div>
 	);
 }
