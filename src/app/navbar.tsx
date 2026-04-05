@@ -26,7 +26,6 @@ export default function NavBar() {
             <div style={{visibility: isOpen ? 'visible' : 'hidden'}} className='flex flex-col absolute right-0 pr-10 h-screen w-40 items-center text-xl pt-5 bg-fucoraCards'>
                 <Link href="/about" className='pl-5 pt-3 text-fucoraText'>About</Link>
                 <Link href="/projects" className='pl-5 pt-3 text-fucoraText'>Projects</Link>
-                <Link href="/team" className='pl-5 pt-3 text-fucoraText'>Team</Link>
                 <Link href='/contact' className='pl-5 pt-3 text-fucoraText'>Contact</Link>
             </div>
         </div>
