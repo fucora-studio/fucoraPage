@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "Fucora",
-	description: "Official Fucora Page, Home of multiple projects by Ddrew.Y",
+	description: "Official Fucora Page, Home of multiple projects created by Fucora Team",
 };
 
 export default function RootLayout({
