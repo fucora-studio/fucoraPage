@@ -8,7 +8,7 @@ export default function Home() {
 				<h2 className="font-semibold text-xl">Derived from Fuciphagus(Indonesian Swiftlet) and</h2>
 				<h2 className="font-semibold text-xl">Phascolarctos(Australian Koala). A tribute to a dual heritage,</h2>
 				<h2 className="font-semibold text-xl">built and developed on Eora land.</h2>
-				<p className="text-md">Made by a group of UNSW students to help others</p>
+				<p className="text-md">Engineering the invisible. Impact by design.</p>
 			</div>
 
 			<div className='flex flex-row mt-5 gap-3 items-start max-w-fit'>
