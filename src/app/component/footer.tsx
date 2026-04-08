@@ -4,10 +4,10 @@ export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <div className='sticky bottom-0 p-2 flex flex-row justify-between bg-fucoraBorders'>
+        <div className='sticky bottom-0 p-2 flex flex-row justify-between bg-fucoraBorders w-screen'>
             <div/>
-            <div className='ml-50 flex items-center'>
-                <p className='text-background text-sm'>Created on Eora Land © {year}</p>
+            <div className='ml-50 md:ml-30 flex items-center'>
+                <p className='text-background text-sm '>Created on Eora Land © {year}</p>
             </div>
 
             <div className='flex flex-row justify-end'>
