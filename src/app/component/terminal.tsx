@@ -15,6 +15,8 @@ export default function Terminal() {
         e.preventDefault();
 
         let newResponse: any = null;
+        let clear:Boolean = false; 
+
         setCmd(cmd.trim());
         const cleanInput = cmd.toLowerCase();
         if(cleanInput.startsWith("status check")) {
@@ -24,29 +26,35 @@ export default function Terminal() {
                         <p>[Construction/Maintenance]</p>
                         <p>Fucora Hub: Construction</p>
                     </div>
-                )
+                );
             } else {
                 newResponse = (
                     <div className="flex flex-row">
                         <p>[Construction/Maintenance]</p>
                         <p>Fucora Hub: Construction</p>
                     </div>
-                )
+                );
             }
         } else if(cleanInput.startsWith('open blueprint')) {
-            newResponse = (<p>Under Construction</p>)
+            newResponse = (<p>Under Construction</p>);
+        } else if (cleanInput == 'clear') {
+            clear = true;
         } else {
-            newResponse = (<p>Command {cmd} not found</p>)
+            newResponse = (<p>Command {cmd} not found</p>);
         }
 
         setCmd('');
-        setHistory([...history, {input: cmd, output:newResponse}]);
+        if (clear == true) {
+            setHistory([]);
+        } else {
+            setHistory([...history, {input: cmd, output:newResponse}]);
+        }
     }
     
     return (
         <div className={`${JetBrains.className} 
         flex flex-col justify-items-start border-gray rounded-xl 
-        bg-gray-900 h-[15vw] p-3 w-[50vw] shadow-lg shadow-fucoraButton/10 shrink-0`}>
+        bg-gray-900 h-[40vw] p-3 w-[90vw] md:w-[50vw] md:h[15-vw] shadow-lg shadow-fucoraButton/10 shrink-0`}>
             <div className="flex flex-col">
                 {history.map((item, index) =>(
                     <div key={index}>
@@ -75,7 +83,7 @@ export default function Terminal() {
                     <input
                     value={cmd}
                     onChange={(e) =>setCmd(e.target.value)}
-                    className="text-ivory outline-none caret-transparent w-[30vw]"
+                    className="text-ivory outline-none caret-transparent w-[90vw] md:[30vw]"
                     spellCheck= "false"
                     autoComplete="off"
                     type="text"
