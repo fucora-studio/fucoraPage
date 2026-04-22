@@ -3,7 +3,6 @@
 :root {
 	--background: #1A1C1E;
 	--background: #F1F1E6;
-	
 }
 
 @keyframes blink {
@@ -30,6 +29,10 @@
 		--background: #1a1c1e;
 		--foreground: #f1f1e6;
 	}
+}
+
+html, body {
+  @apply h-full w-full m-0 p-0 overflow-hidden;
 }
 
 body {
