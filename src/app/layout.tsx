@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import { cn } from "@/lib/utils";
 import type { Viewport } from 'next';
 
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
@@ -53,7 +52,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={cn("font-mono", jetbrainsMono.variable)}>
+		<html lang="en" className={`font-mono ${jetbrainsMono.variable}`}>
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 			</head>
