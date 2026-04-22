@@ -1,5 +1,6 @@
 'use client';
-import { use, useState } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { JetBrains_Mono } from "next/font/google";
 
 const JetBrains=JetBrains_Mono ({
@@ -9,7 +10,7 @@ const JetBrains=JetBrains_Mono ({
 export default function Terminal() {
     const [cmd, setCmd] = useState('');
     const [history, setHistory]= useState<any[]>([]);
-
+    const router = useRouter();
    
     function process_cmd(e: any) {
         e.preventDefault();
@@ -19,7 +20,14 @@ export default function Terminal() {
 
         setCmd(cmd.trim());
         const cleanInput = cmd.toLowerCase();
-        if(cleanInput.startsWith("status check")) {
+
+         if (cleanInput.startsWith("cd")) {
+            if (cleanInput.includes("about")) {
+                router.replace("/about");
+            } else if (cleanInput.includes("projects")) {
+                router.replace("/projects");
+            }
+        } else if(cleanInput.startsWith("status check")) {
             if (cleanInput == "status check --all") {
                 newResponse = (
                     <div className="flex flex-row">
@@ -54,7 +62,7 @@ export default function Terminal() {
     return (
         <div className={`${JetBrains.className} 
         flex flex-col justify-items-start border-gray rounded-xl 
-        bg-gray-900 h-[40vw] p-3 w-[90vw] md:w-[50vw] md:h[15-vw] shadow-lg shadow-fucoraButton/10 shrink-0`}>
+        bg-gray-900 h-[60vw] p-3 w-[85vw] md:w-[70vw] md:h-[18vw] lg:h-[18vw] shadow-lg shadow-fucoraButton/10 shrink-0`}>
             <div className="flex flex-col">
                 {history.map((item, index) =>(
                     <div key={index}>
@@ -71,7 +79,7 @@ export default function Terminal() {
                     </div>
                 ))}
             </div>
-            <form className='relative flex gap-2' onSubmit={process_cmd}>
+            <form className='relative flex gap-1' onSubmit={process_cmd}>
                 <div className="font-bold h-3 shrink-0">
                     <span className="text-green-500">fucora@app</span> 
                     <span>:</span>
@@ -79,15 +87,15 @@ export default function Terminal() {
                     <span>$</span>                    
                 </div>
 
-                <div className="relative flex-1 h-3">
+                <div className="relative h-3">
                     <input
                     value={cmd}
                     onChange={(e) =>setCmd(e.target.value)}
-                    className="text-ivory outline-none caret-transparent w-[90vw] md:[30vw]"
+                    className="text-ivory outline-none caret-transparent w-[80vw] md:[30vw]"
                     spellCheck= "false"
                     autoComplete="off"
                     type="text"
-                    maxLength={30}
+                    maxLength={20}
                     />
                     <span className="absolute left-1 pointers-events-none">
                         <span className="opacity-0">{cmd}</span>

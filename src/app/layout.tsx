@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "./component/navbar";
-import Footer from "./component/footer";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import { cn } from "@/lib/utils";
+import type { Viewport } from 'next';
+
+const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: 'cover'
+}
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -41,11 +53,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className={cn("font-mono", jetbrainsMono.variable)}>
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full w-full`}>
 				<NavBar/>
 				{children}
 				<Footer/>
