@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className='fixed bottom-0 left-0 p-2 flex flex-row justify-between bg-fucoraBorders w-screen'>
             <div/>
-            <div className='ml-4 md:ml-50 flex items-center'>
+            <div className='ml-4 flex items-center'>
                 <p className='text-background mt-1 text-xs md:text-sm lg:text-sm'>Created on Eora Land © {year}</p>
             </div>
 

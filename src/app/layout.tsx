@@ -8,12 +8,12 @@ import type { Viewport } from 'next';
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  viewportFit: 'cover'
-}
+// export const viewport: Viewport = {
+//   width: 'device-width',
+//   initialScale: 1,
+//   maximumScale: 1,
+//   viewportFit: 'cover'
+// }
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -56,7 +56,7 @@ export default function RootLayout({
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full w-full`}>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<NavBar/>
 				{children}
 				<Footer/>

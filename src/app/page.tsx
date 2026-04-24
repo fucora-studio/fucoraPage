@@ -2,7 +2,7 @@ import Terminal from '@/components/terminal';
 
 export default function Home() {
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen">	
+		<div className="flex flex-col items-center justify-center h-screen">
 			<div className='flex flex-col w-fit ml-5 mr-5 md:pl-0 lg:pl-0 xl:pl-0'>
 				<div className='flex flex-row'>
 					<h1 className="font-bold text-2xl md:text-4xl">Fucora</h1>
@@ -18,7 +18,7 @@ export default function Home() {
 				<div className='flex justify-items-start pt-5'>
 					<Terminal/>
 				</div>
-			</div>			
+			</div>		
 		</div>
 	);
 }
