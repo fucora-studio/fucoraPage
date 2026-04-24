@@ -28,10 +28,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "Fucora",
 	description: "Official Fucora Page, Home of multiple projects created by Fucora Team",
-	keywords: ["Fucora", "UNSW", "Student Tools", "Talea Tally", "Cybersecurity"],
+	keywords: ["Fucora", "UNSW", "Student Tools", "Tally", "Student Led Project"],
 	openGraph: {
-    title: 'Fucora',
-    description: 'Official Fucora Page, Home of multiple projects created by Fucora Team',
     url: 'https://fucora.app',
     siteName: 'Fucora',
     // images: [
