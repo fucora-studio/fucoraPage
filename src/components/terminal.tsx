@@ -30,16 +30,23 @@ export default function Terminal() {
         } else if(cleanInput.startsWith("status check")) {
             if (cleanInput == "status check --all") {
                 newResponse = (
-                    <div className="flex flex-row">
-                        <p>[Construction/Maintenance]</p>
-                        <p>Fucora Hub: Construction</p>
+                    <div className="flex flex-col">
+                        <div className="flex flex-row">
+                            <p>[RUNNING]</p>
+                            <p>Fucora Hub: Fucora 1.0.0</p>
+                        </div>
+                        <div className="flex flex-row">
+                            <p>[CONSTRUCTION]</p>
+                            <p>Tally: Construction</p>
+                        </div>
                     </div>
+                    
                 );
             } else {
                 newResponse = (
                     <div className="flex flex-row">
-                        <p>[Construction/Maintenance]</p>
-                        <p>Fucora Hub: Construction</p>
+                        <p>[RUNNING]</p>
+                        <p>Fucora Hub: Fucora 1.0.0</p>
                     </div>
                 );
             }

@@ -8,12 +8,12 @@ import type { Viewport } from 'next';
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-  viewportFit: 'cover'
-}
+// export const viewport: Viewport = {
+//   width: 'device-width',
+//   initialScale: 1,
+//   maximumScale: 1,
+//   viewportFit: 'cover'
+// }
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -28,10 +28,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "Fucora",
 	description: "Official Fucora Page, Home of multiple projects created by Fucora Team",
-	keywords: ["Fucora", "UNSW", "Student Tools", "Talea Tally", "Cybersecurity"],
+	keywords: ["Fucora", "UNSW", "Student Tools", "Tally", "Student Led Project"],
 	openGraph: {
-    title: 'Fucora',
-    description: 'Official Fucora Page, Home of multiple projects created by Fucora Team',
     url: 'https://fucora.app',
     siteName: 'Fucora',
     // images: [
@@ -56,7 +54,7 @@ export default function RootLayout({
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full w-full`}>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<NavBar/>
 				{children}
 				<Footer/>
