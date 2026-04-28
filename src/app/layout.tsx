@@ -3,17 +3,8 @@ import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import type { Viewport } from 'next';
 
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
-
-
-// export const viewport: Viewport = {
-//   width: 'device-width',
-//   initialScale: 1,
-//   maximumScale: 1,
-//   viewportFit: 'cover'
-// }
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",

@@ -1,3 +1,10 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Project | Fucora", 
+    description: "Project from Fucora"
+}
+
 export default function Projects() {
     return(
         <div className="flex flex-col justify-between items-center mt-20">

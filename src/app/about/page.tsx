@@ -1,7 +1,14 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title:"About | Fucora", 
+    description:"Understand more about Fucora!"
+}
+
 export default function About() {
     return(
-        <div className="flex justify-center items-center ml-5 mr-5 md:ml-20 md:mr-20 lg:ml-80 lg:mr-80">
-            <div className="flex flex-col border-transparent rounded-2xl bg-fucoraCards  p-3 md:p-8 lg:p-10">
+        <div className="flex justify-center items-center h-screen md:h-[120vh] md:mt-0 ml-5 mr-5 md:ml-20 md:mr-20 lg:ml-80 lg:mr-80">
+            <div className="flex flex-col border-transparent rounded-2xl bg-fucoraCards p-3 md:p-8 lg:p-10">
                 <div className="flex flex-row justify-center">
                     <h2 className="font-bold text-lg md:text-xl lg:text-2xl">Who We Are</h2>
                 </div>
