@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function NavBar() {
 
     return (
-        <div className='flex flex-row justify-between fixed top-0 min-w-full bg-fucoraCards pt-1.5 pb-1.5 shadow-xl shadow-fucoraButton/18'>
+        <div className='fixed top-0 left-0 z-50 flex flex-row justify-between min-w-full bg-fucoraCards pt-1.5 pb-1.5 shadow-xl shadow-fucoraButton/18'>
                 <div className='flex flex-row pl-1 justify-between'>
                     <Link href="/" className='pt-1.5 pl-1.5'>
                         <img src="/favicon.png" alt='Logo' className='w-10 h-10'/>
