@@ -1,9 +1,14 @@
 import Terminal from '@/components/terminal';
-
+import { GravityStarsBackground } from '@/components/animate-ui/components/backgrounds/gravity-stars';
 export default function Home() {
 	return (
-		<div className="flex flex-col items-center justify-center h-screen">
-			<div className='flex flex-col w-fit ml-5 mr-5 md:pl-0 lg:pl-0 xl:pl-0'>
+		<div className="flex flex-col items-center justify-center h-screen relative">
+			<GravityStarsBackground 
+				starsCount={100}
+				starsOpacity={0.50}
+				className="h-screen w-screen"
+			/>
+			<div className='flex flex-col w-fit ml-5 mr-5 md:pl-0 lg:pl-0 xl:pl-0 absolute z-50'>
 				<div className='flex flex-row'>
 					<h1 className="font-bold text-2xl md:text-4xl">Fucora</h1>
 					<p className='flex font-bold text-xl md:text-2xl text-foreground/40 ml-2 items-center'>[/fuːˈkɔːrə/]</p>

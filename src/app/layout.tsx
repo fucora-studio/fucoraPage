@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import { cn } from "@/lib/utils";
+
+const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
@@ -41,11 +44,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`font-mono ${jetbrainsMono.variable}`}>
+		<html lang="en" className={cn(jetbrainsMono.variable, "font-sans", figtree.variable)}>
 			<head>
 				<link rel="icon" href="/favicon.png" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
 				<NavBar/>
 				{children}
 				<Footer/>
