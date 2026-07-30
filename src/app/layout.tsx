@@ -26,13 +26,6 @@ export const metadata: Metadata = {
 	openGraph: {
     url: 'https://fucora.app',
     siteName: 'Fucora',
-    // images: [
-    //   {
-    //     url: 'https://fucora.app/og-main.png', // The path to your branding image
-    //     width: 1200,
-    //     height: 630,
-    //   },
-    // ],
     locale: 'en_AU',
     type: 'website',
   },
