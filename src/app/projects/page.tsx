@@ -9,7 +9,7 @@ export default function Projects() {
                 className="h-screen w-screen"
             />
             <div className="absolute z-10">
-                <div className="flex flex-col rounded-2xl border-transparent bg-fucoraBorders p-3 w-[80vw] h-[13vh] md:w-[30vw] md:h-[15vh] item-center justify-center">
+                <div className="flex flex-col rounded-2xl border-transparent bg-fucoraCards p-3 w-[80vw] h-[13vh] md:w-[30vw] md:h-[15vh] item-center justify-center">
                     <a href="https://tally.fucora.app" className="flex flex-col w-[75vw] md:w-[28vw] md:h-[30vh] md:pt-4">
                         <div className="flex flex-row">
                             <img src='null' alt="tally logo"></img>

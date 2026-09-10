@@ -67,12 +67,17 @@ export default function Terminal() {
     }
     
     return (
-        <div className={`${JetBrains.className} 
-        flex flex-col justify-items-start border-gray rounded-xl 
-        bg-gray-900 h-[60vw] p-3 w-[85vw] md:w-[70vw] md:h-[18vw] lg:h-[18vw] shadow-lg shadow-fucoraButton/10 shrink-0`}>
+        <div 
+            style={{ borderRadius: '12px' }}
+            className={`
+                flex flex-col justify-items-start border-none
+                bg-fucoraTerminal h-[60vw] p-3 w-[85vw] md:w-[70vw] md:h-[18vw] lg:h-[18vw] shadow-md shadow-fucoraGlow
+                ${JetBrains.className}`
+            }
+        >
             <div className="flex flex-col">
                 {history.map((item, index) =>(
-                    <div key={index}>
+                    <div key={index}>                   
                         <div className="flex flex-row">
                             <span className="text-green-500">fucora@app</span>
                             <span>:</span>
@@ -98,7 +103,7 @@ export default function Terminal() {
                     <input
                     value={cmd}
                     onChange={(e) =>setCmd(e.target.value)}
-                    className="text-ivory outline-none caret-transparent w-[80vw] md:[30vw]"
+                    className="text-ivory outline-none caret-transparent w-[80vw] md:w-[30vw]"
                     spellCheck= "false"
                     autoComplete="off"
                     type="text"

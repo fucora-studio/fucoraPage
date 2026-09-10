@@ -13,14 +13,14 @@ export default function Home() {
 					<h1 className="font-bold text-2xl md:text-4xl">Fucora</h1>
 					<p className='flex font-bold text-xl md:text-2xl text-foreground/40 ml-2 items-center'>[/fuːˈkɔːrə/]</p>
 				</div>
-				<h2 className="font-semibold text-lg md:text-xl lg:text-2xl">
+				<h2 className="font-semibold text-lg md:text-xl lg:text-3xl">
 					Derived from Fuciphagus(Indonesian Swiftlet)<br/>
 					and Phascolarctos(Australian Koala).<br/>
 					A tribute to a dual heritage, built and developed on Eora land.
 				</h2>
-				<p className="text-sm md:text-md">Engineering the invisible. Impact by design.</p>
+				<p className="text-sm md:text-md lg:text-lg">Engineering the invisible. Impact by design.</p>
 
-				<div className='flex justify-items-start pt-5'>
+				<div className='flex justify-items-start pt-5 isolate relative rounded-xl'>
 					<Terminal/>
 				</div>
 			</div>		
