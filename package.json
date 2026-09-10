@@ -2,6 +2,7 @@
 	"name": "fucora",
 	"version": "1.0.1",
 	"private": true,
+	"packageManager": "pnpm@12.3.4",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
